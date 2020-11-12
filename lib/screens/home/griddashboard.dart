@@ -57,7 +57,7 @@ class GridDashboard extends StatelessWidget {
                     Navigator.pushNamed(context, ScanPage.routeName);
                   } else if (data.title == "QR Maker") {
                     Navigator.pushNamed(context, GeneratePage.routeName);
-                  } else if (data.title == "Location GPS") {
+                  } else if (data.title == "Locations GPS") {
                     Navigator.pushNamed(context, GpsTracker.routeName);
                   }
                 },
