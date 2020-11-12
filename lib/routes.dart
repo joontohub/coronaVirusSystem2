@@ -24,7 +24,7 @@ final Map<String, WidgetBuilder> routes = {
   OtpScreen.routeName: (context) => OtpScreen(),
   GeneratePage.routeName: (context) => GeneratePage(),
   ScanPage.routeName: (context) => ScanPage(),
-  HomePage.routeName: (context) => HomePage(),
+  Home.routeName: (context) => Home(),
   DetailsScreen.routeName: (context) => DetailsScreen(),
   GpsTracker.routeName: (context) => GpsTracker(),
 };

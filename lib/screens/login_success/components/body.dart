@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:virus_bob/components/default_button.dart';
 import 'package:virus_bob/size_config.dart';
+import 'package:virus_bob/screens/home/home_page.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -27,7 +28,7 @@ class Body extends StatelessWidget {
           child: DefaultButton(
             text: "Back to home",
             press: () {
-              //   Navigator.pushNamed(context, HomeScreen.routeName);
+              Navigator.pushNamed(context, Home.routeName);
             },
           ),
         ),
