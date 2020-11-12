@@ -1,4 +1,4 @@
-package com.example.shop_app
+package com.example.virus_bob
 
 import io.flutter.embedding.android.FlutterActivity
 

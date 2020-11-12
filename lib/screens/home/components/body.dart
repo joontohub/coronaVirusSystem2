@@ -1,31 +1,36 @@
 import 'package:flutter/material.dart';
-
-import '../../../size_config.dart';
-import 'categories.dart';
-import 'discount_banner.dart';
-import 'home_header.dart';
-import 'popular_product.dart';
-import 'special_offers.dart';
+import 'package:virus_bob/components/default_button.dart';
+import 'package:virus_bob/size_config.dart';
 
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            SizedBox(height: getProportionateScreenHeight(20)),
-            HomeHeader(),
-            SizedBox(height: getProportionateScreenWidth(10)),
-            DiscountBanner(),
-            Categories(),
-            SpecialOffers(),
-            SizedBox(height: getProportionateScreenWidth(30)),
-            PopularProducts(),
-            SizedBox(height: getProportionateScreenWidth(30)),
-          ],
+    return Column(
+      children: [
+        SizedBox(height: SizeConfig.screenHeight * 0.04),
+        Image.asset(
+          "assets/images/success.png",
+          height: SizeConfig.screenHeight * 0.4, //40%
         ),
-      ),
+        SizedBox(height: SizeConfig.screenHeight * 0.08),
+        Text(
+          "Login Success",
+          style: TextStyle(
+            fontSize: getProportionateScreenWidth(30),
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+        ),
+        Spacer(),
+        SizedBox(
+          width: SizeConfig.screenWidth * 0.6,
+          child: DefaultButton(
+            text: "Back to home",
+            press: () {},
+          ),
+        ),
+        Spacer(),
+      ],
     );
   }
 }

@@ -1,4 +1,4 @@
-name: shop_app
+name: virus_bob
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -23,7 +23,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  geolocator: ^6.0.0
+  http: ^0.12.0+2
+  qr_flutter: ^3.1.0
+  barcode_scan: 2.0.1
+  flutter_signin_button: ^1.1.0
+  location: ^2.3.5
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3

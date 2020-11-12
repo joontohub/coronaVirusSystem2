@@ -10,13 +10,14 @@ ThemeData theme() {
     textTheme: textTheme(),
     inputDecorationTheme: inputDecorationTheme(),
     visualDensity: VisualDensity.adaptivePlatformDensity,
+    buttonColor: Colors.green,
   );
 }
 
 InputDecorationTheme inputDecorationTheme() {
   OutlineInputBorder outlineInputBorder = OutlineInputBorder(
     borderRadius: BorderRadius.circular(28),
-    borderSide: BorderSide(color: kTextColor),
+    borderSide: BorderSide(color: Colors.green),
     gapPadding: 10,
   );
   return InputDecorationTheme(
@@ -33,8 +34,8 @@ InputDecorationTheme inputDecorationTheme() {
 
 TextTheme textTheme() {
   return TextTheme(
-    bodyText1: TextStyle(color: kTextColor),
-    bodyText2: TextStyle(color: kTextColor),
+    bodyText1: TextStyle(color: Colors.green),
+    bodyText2: TextStyle(color: Colors.green),
   );
 }
 

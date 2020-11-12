@@ -17,10 +17,10 @@ class SplashContent extends StatelessWidget {
       children: <Widget>[
         Spacer(),
         Text(
-          "TOKOTO",
+          "BoB slayer",
           style: TextStyle(
             fontSize: getProportionateScreenWidth(36),
-            color: kPrimaryColor,
+            color: Colors.green,
             fontWeight: FontWeight.bold,
           ),
         ),

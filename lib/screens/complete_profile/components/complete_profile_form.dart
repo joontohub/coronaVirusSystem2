@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/components/custom_surfix_icon.dart';
-import 'package:shop_app/components/default_button.dart';
-import 'package:shop_app/components/form_error.dart';
-import 'package:shop_app/screens/otp/otp_screen.dart';
+import 'package:virus_bob/components/custom_surfix_icon.dart';
+import 'package:virus_bob/components/default_button.dart';
+import 'package:virus_bob/components/form_error.dart';
+import 'package:virus_bob/screens/login_success/login_success_screen.dart';
+import 'package:virus_bob/screens/otp/otp_screen.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
@@ -19,7 +20,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
   String lastName;
   String phoneNumber;
   String address;
-
+  bool agreeChecker = false;
   void addError({String error}) {
     if (!errors.contains(error))
       setState(() {
@@ -48,12 +49,30 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
           SizedBox(height: getProportionateScreenHeight(30)),
           buildAddressFormField(),
           FormError(errors: errors),
-          SizedBox(height: getProportionateScreenHeight(40)),
+          SizedBox(height: getProportionateScreenHeight(10)),
+          Row(
+            children: [
+              Checkbox(
+                value: agreeChecker,
+                activeColor: kPrimaryColor,
+                onChanged: (value) {
+                  setState(() {
+                    agreeChecker = value;
+                  });
+                },
+              ),
+              Text("방역당국 위치정보 제공 동의"),
+              Spacer(),
+            ],
+          ),
+          FormError(errors: errors),
+          SizedBox(height: getProportionateScreenHeight(10)),
           DefaultButton(
             text: "continue",
             press: () {
               if (_formKey.currentState.validate()) {
-                Navigator.pushNamed(context, OtpScreen.routeName);
+                //Navigator.pushNamed(context, OtpScreen.routeName);
+                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
               }
             },
           ),

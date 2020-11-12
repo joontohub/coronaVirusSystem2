@@ -16,8 +16,8 @@ class _BodyState extends State<Body> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
     {
-      "text": "Welcome to Tokoto, Let’s shop!",
-      "image": "assets/images/splash_1.png"
+      "text": "Welcome to virus keeper, Let’s go!",
+      "image": "assets/images/logo.png"
     },
     {
       "text":
@@ -55,7 +55,7 @@ class _BodyState extends State<Body> {
               flex: 2,
               child: Padding(
                 padding: EdgeInsets.symmetric(
-                    horizontal: getProportionateScreenWidth(20)),
+                    horizontal: getProportionateScreenWidth(50)),
                 child: Column(
                   children: <Widget>[
                     Spacer(),
@@ -68,7 +68,7 @@ class _BodyState extends State<Body> {
                     ),
                     Spacer(flex: 3),
                     DefaultButton(
-                      text: "Continue",
+                      text: "Sign In",
                       press: () {
                         Navigator.pushNamed(context, SignInScreen.routeName);
                       },
@@ -91,7 +91,7 @@ class _BodyState extends State<Body> {
       height: 6,
       width: currentPage == index ? 20 : 6,
       decoration: BoxDecoration(
-        color: currentPage == index ? kPrimaryColor : Color(0xFFD8D8D8),
+        color: currentPage == index ? Colors.green : Color(0xFFD8D8D8),
         borderRadius: BorderRadius.circular(3),
       ),
     );
